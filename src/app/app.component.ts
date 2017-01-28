@@ -23,5 +23,6 @@ export class AppComponent {
     }
   ]
 
-  placeholder = 'test placeholder';
+  placeholder = 'username';
+  username = '';
 }
