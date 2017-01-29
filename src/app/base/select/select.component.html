@@ -1,6 +1,6 @@
 <p>
-  <select class="form-control" name="">
-    <option *ngFor="let item of selection" value="{{item.id}}">{{item.name}}</option>
+  <select class="form-control" name="" [value]="value" (change)="update($event.target.value)">
+    <option *ngFor="let item of selection" [value]="item.id">{{item.name}}</option>
   </select>
   {{selection | json}}
 </p>

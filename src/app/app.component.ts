@@ -25,4 +25,5 @@ export class AppComponent {
 
   placeholder = 'username';
   username = '';
+  city = 1;
 }

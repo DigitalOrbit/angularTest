@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-select',
@@ -7,12 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SelectComponent implements OnInit {
 
-  constructor() { }
+  @Input() selection;
+  @Input() value: number;
+  @Output() valueChange = new EventEmitter<number>();
 
-  ngOnInit() {
-    console.log(this.selection);
+  update (val: number) {
+    this.value = val;
+    this.valueChange.emit(this.value);
   }
 
-  @Input() selection = [];
+  constructor() {
+    this.value = 1;
+  }
 
+  ngOnInit() {}
 }
