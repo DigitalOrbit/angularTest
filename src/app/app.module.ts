@@ -6,10 +6,12 @@ import { HttpModule } from '@angular/http';
 import { BaseModule } from './base/base.module';
 
 import { AppComponent } from './app.component';
+import { KeyValuePipe } from './pipes/key-value.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KeyValuePipe
   ],
   imports: [
     BrowserModule,
