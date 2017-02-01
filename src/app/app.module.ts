@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { appRoutes, appRoutingProviders } from './app.routing';
+import { routing } from './app.routing';
 
 import { BaseModule } from './base/base.module';
 import { PagesModule } from './pages/pages.module';
@@ -24,10 +24,9 @@ import { KeyValuePipe } from './pipes/key-value.pipe';
     HttpModule,
     BaseModule,
     PagesModule,
-    RouterModule.forRoot(appRoutes),
+    routing
   ],
   providers: [
-    appRoutingProviders,
   ],
   bootstrap: [
     AppComponent

@@ -1,1 +1,3 @@
+<label *ngIf="label">{{label}}</label>
 <input class="form-control" placeholder="{{placeholder}}" type="text" [value]="value" (input)="update($event.target.value)">
+<small class="form-text text-muted" *ngIf="smallText">{{smallText}}</small>

@@ -19,15 +19,13 @@
     </div>
   </form>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       <h2>Navigation</h2>
-      <ul class="list-group">
-        <li class="list-group-item" *ngFor="let item of selection">
-          {{item.id}}: {{item.name}} ({{item.age}})
-        </li>
-      </ul>
+      <div class="list-group">
+         <a class="list-group-item list-group-item-action" routerLink="/{{item.path}}" routerLinkActive="active" *ngFor="let item of routes" [ngClass]="{'invisible': item.path === '**'}">{{item.path}}Component</a> 
+      </div>
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-8">
       <router-outlet></router-outlet>
     </div>
   </div>
