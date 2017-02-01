@@ -1,2 +1,1 @@
-<label>{{label}}</label>
-<input placeholder="{{placeholder}}" type="text" name="" value="">
+<input class="form-control" placeholder="{{placeholder}}" type="text" [value]="value" (input)="update($event.target.value)">

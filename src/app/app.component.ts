@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { CitiesService } from './services/cities.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [ CitiesService ]
 })
 export class AppComponent {
   title = 'app works!';
+  placeholder = 'username';
+  username = '';
 
   routes = [
     {
@@ -14,20 +18,19 @@ export class AppComponent {
       target: 'pages/Input'
     }
   ]
-  selection = [
-    {
-      id: 1,
-      name: 'Frankfurt'
-    },
-    {
-      id: 2,
-      name: 'Köln'
-    },
-    {
-      id: 3,
-      name: 'Fryslan'
-    }
-  ]
 
-  placeholder = 'test placeholder';
+  selectedKey = 1;
+  selection = [];
+  errorMessage: string;
+
+  constructor(private citiesService: CitiesService) {
+    this.getCities();
+  }
+
+  getCities() {
+    this.citiesService.getCities()
+                      .subscribe(
+                        response => this.selection = response,
+                        error =>  this.errorMessage = <any>error);
+  }
 }

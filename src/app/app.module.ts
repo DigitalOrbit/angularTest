@@ -10,11 +10,13 @@ import { PagesModule } from './pages/pages.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { KeyValuePipe } from './pipes/key-value.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    KeyValuePipe
   ],
   imports: [
     BrowserModule,
