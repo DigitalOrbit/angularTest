@@ -8,6 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
 
+  routes = [
+    {
+      name: 'Input',
+      target: 'pages/Input'
+    }
+  ]
   selection = [
     {
       id: 1,
