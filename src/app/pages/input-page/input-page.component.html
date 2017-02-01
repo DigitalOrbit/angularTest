@@ -1,42 +1,38 @@
 <h2>Input Component</h2>
-<div class="row">
-  <div class="col">
-    <div class="card">
-      <div class="card-block">
-        <app-input [placeholder]="myPlaceholder" [label]="myLabel" [smallText]="mySmallText" [(value)]="myValue"></app-input>
-      </div>
+<div class="card-deck">
+  <div class="card">
+    <div class="card-block">
+      <app-input [placeholder]="myPlaceholder" [label]="myLabel" [smallText]="mySmallText" [(value)]="myValue"></app-input>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-block">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Option</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td scope="row">Output:</td>
-              <td><span *ngIf="myValue">{{myValue}}</span><span *ngIf="!myValue"><em>empty</em></span></td>
-            </tr>
-            <tr>
-              <td scope="row">Label:</td>
-              <td><input class="form-control" [(ngModel)]="myLabel"></td>
-            </tr>
-            <tr>
-              <td scope="row">Placeholder:</td>
-              <td><input class="form-control" [(ngModel)]="myPlaceholder"></td>
-            </tr>
-            <tr>
-              <td scope="row">SmallText:</td>
-              <td><input class="form-control" [(ngModel)]="mySmallText"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Output:</td>
+            <td><span *ngIf="myValue">{{myValue}}</span><span *ngIf="!myValue"><em>empty</em></span></td>
+          </tr>
+          <tr>
+            <td scope="row">Label:</td>
+            <td><input class="form-control" [(ngModel)]="myLabel"></td>
+          </tr>
+          <tr>
+            <td scope="row">Placeholder:</td>
+            <td><input class="form-control" [(ngModel)]="myPlaceholder"></td>
+          </tr>
+          <tr>
+            <td scope="row">SmallText:</td>
+            <td><input class="form-control" [(ngModel)]="mySmallText"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
