@@ -2,7 +2,7 @@
 <div class="card-deck">
   <div class="card">
     <div class="card-block">
-      <app-input [placeholder]="myPlaceholder" [label]="myLabel" [helpText]="myHelpText" [(value)]="myValue"></app-input>
+      <app-select [label]="myLabel" [helpText]="myHelpText" [selection]="mySelection" [(value)]="myValue"></app-select>
     </div>
   </div>
   <div class="card">
@@ -16,16 +16,22 @@
         </thead>
         <tbody>
           <tr>
+            <td scope="row">Input:</td>
+            <td>
+              <pre class="mb-0">
+                <code>
+                  {{mySelection | json}}
+                </code>
+              </pre>
+            </td>
+          </tr>
+          <tr>
             <td scope="row">Output:</td>
-            <td><span *ngIf="myValue">{{myValue}}</span><span *ngIf="!myValue"><em>empty</em></span></td>
+            <td><span *ngIf="myValue">{{mySelection | keyValue: myValue}}</span><span *ngIf="!myValue"><em>empty</em></span></td>
           </tr>
           <tr>
             <td scope="row">Label:</td>
             <td><input class="form-control" [(ngModel)]="myLabel"></td>
-          </tr>
-          <tr>
-            <td scope="row">Placeholder:</td>
-            <td><input class="form-control" [(ngModel)]="myPlaceholder"></td>
           </tr>
           <tr>
             <td scope="row">HelpText:</td>

@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class InputPageComponent {
 
-  myLabel: string = 'Mein Label';
-  myPlaceholder: string = 'Bitte etwas eingeben';
-  mySmallText: string = 'Das ist ein Hinweis';
+  myLabel: string = 'My Label';
+  myPlaceholder: string = 'Please insert some text';
+  mySmallText: string = `That's a help text`;
   myValue: string = '';
 }

@@ -1,11 +1,14 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-select',
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss']
 })
-export class SelectComponent implements OnInit {
+export class SelectComponent {
+
+  @Input() label = '';
+  @Input() helpText = '';
   @Input() selection: Array<any>;
 
   @Input() value: number;
@@ -20,5 +23,4 @@ export class SelectComponent implements OnInit {
     this.valueChange.emit(this.value);
   }
 
-  ngOnInit() {}
 }

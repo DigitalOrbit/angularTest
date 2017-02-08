@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { SelectComponent } from './select/select.component';
 import { InputComponent } from './input/input.component';
+import { KeyValuePipe } from '../pipes/key-value.pipe';
 
 @NgModule({
   imports: [
@@ -10,11 +11,13 @@ import { InputComponent } from './input/input.component';
   ],
   exports: [
     SelectComponent,
-    InputComponent
+    InputComponent,
+    KeyValuePipe
   ],
   declarations: [
     SelectComponent,
-    InputComponent
+    InputComponent,
+    KeyValuePipe
   ],
   providers: []
 })

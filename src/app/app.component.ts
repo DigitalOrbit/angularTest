@@ -10,8 +10,6 @@ import { appRoutes } from './app.routing';
 })
 export class AppComponent {
   title = 'app works!';
-  placeholder = 'username';
-  username = '';
   routes: any;
 
   selectedKey = 1;

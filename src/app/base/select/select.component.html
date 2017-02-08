@@ -1,6 +1,5 @@
-<p>
-  <select class="form-control" name="" [value]="value" (change)="update($event.target.value)">
-    <option *ngFor="let item of selection" [value]="item.key">{{item.value}}</option>
-  </select>
-  {{selection | json}}
-</p>
+<label *ngIf="label">{{label}}</label>
+<select class="form-control" name="" [value]="value" (change)="update($event.target.value)">
+  <option *ngFor="let item of selection" [value]="item.key">{{item.value}}</option>
+</select>
+<small class="form-text text-muted" *ngIf="helpText">{{helpText}}</small>
