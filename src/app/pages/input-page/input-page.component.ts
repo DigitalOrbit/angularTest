@@ -9,6 +9,6 @@ export class InputPageComponent {
 
   myLabel: string = 'My Label';
   myPlaceholder: string = 'Please insert some text';
-  mySmallText: string = `That's a help text`;
+  myHelpText: string = `That's a help text`;
   myValue: string = '';
 }
