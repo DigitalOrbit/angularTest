@@ -1,0 +1,46 @@
+<h2>Textarea Component</h2>
+<div class="card-deck">
+  <div class="card">
+    <div class="card-block">
+      <app-textarea [placeholder]="myPlaceholder" [label]="myLabel" [helpText]="myHelpText" [(value)]="myValue" [rows]="myRows" [cols]="myCols"></app-textarea>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Output:</td>
+            <td><span *ngIf="myValue">{{myValue}}</span><span *ngIf="!myValue"><em>empty</em></span></td>
+          </tr>
+          <tr>
+            <td scope="row">Label:</td>
+            <td><input class="form-control" [(ngModel)]="myLabel"></td>
+          </tr>
+          <tr>
+            <td scope="row">Placeholder:</td>
+            <td><input class="form-control" [(ngModel)]="myPlaceholder"></td>
+          </tr>
+          <tr>
+            <td scope="row">HelpText:</td>
+            <td><input class="form-control" [(ngModel)]="myHelpText"></td>
+          </tr>
+          <tr>
+            <td scope="row">Rows:</td>
+            <td><input class="form-control" [(ngModel)]="myRows"></td>
+          </tr>
+          <tr>
+            <td scope="row">Cols:</td>
+            <td><input class="form-control" [(ngModel)]="myCols"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
