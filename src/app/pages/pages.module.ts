@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { BaseModule } from '../base/base.module';
 import { InputPageComponent } from './input-page/input-page.component';
 import { SelectPageComponent } from './select-page/select-page.component';
-import { TextareaPageComponent } from './textarea-page/textarea-page.component';
 
 @NgModule({
     imports: [
@@ -15,13 +14,11 @@ import { TextareaPageComponent } from './textarea-page/textarea-page.component';
     ],
     exports: [
         InputPageComponent,
-        SelectPageComponent,
-        TextareaPageComponent
+        SelectPageComponent
     ],
     declarations: [
         InputPageComponent,
-        SelectPageComponent,
-        TextareaPageComponent
+        SelectPageComponent
     ],
     providers: []
 })

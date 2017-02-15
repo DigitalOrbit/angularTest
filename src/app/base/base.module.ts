@@ -1,26 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { KeyValuePipe } from '../pipes/key-value.pipe';
 import { SelectComponent } from './select/select.component';
 import { InputComponent } from './input/input.component';
-import { TextareaComponent } from './textarea/textarea.component';
+import { KeyValuePipe } from '../pipes/key-value.pipe';
 
 @NgModule({
   imports: [
     BrowserModule
   ],
   exports: [
-    KeyValuePipe,
     SelectComponent,
     InputComponent,
-    TextareaComponent
+    KeyValuePipe
   ],
   declarations: [
-    KeyValuePipe,
     SelectComponent,
     InputComponent,
-    TextareaComponent
+    KeyValuePipe
   ],
   providers: []
 })
