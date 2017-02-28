@@ -1,5 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.container-menu {
+    flex: 1 auto;
+    max-width: 240px;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.container-content {
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-content--title {
+    height: 64px;
+    min-height: 64px;
+}
+
+.container-content--outlet {
+    flex: 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/*
+* Overwrites
+*/
+
 .card-columns--custom {
-  column-width: 18rem;
-  column-count: 3;
+    column-width: 18rem;
+    column-count: 3;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-item {
+    border-left: 0;
+    border-right: 0;
+}
+
+.jumbotron {
+    background-color: #143d66;
+    color: #fff;
+    padding: 2rem;
+    h2 {
+        small {
+            font-size: 50%;
+        }
+    }
 }
